@@ -1,5 +1,6 @@
 #!/bin/sh
 set -x
+echo "current working dir: `pwd`"
 if [ -z $SRC ];
 then
 echo '$src variable is not set.'
