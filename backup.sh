@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -x
 if [ -z $SRC ];
 then
 echo '$src variable is not set.'
@@ -21,5 +21,5 @@ fi
 rclone copy $SRC $BACKUP_NAME
 zipfilename="$(date +%Y%m%d).zip"
 zip -r ${zipfilename} $BACKUP_NAME
-./rclone copy ${zipfilename} $TARGET/$BACKUP_NAME/${zipfilename}
+./rclone copy ${zipfilename} $TARGET/$BACKUP_NAME
 rm ${zipfilename}
