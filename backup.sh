@@ -1,6 +1,7 @@
 #!/bin/sh
 set -x
 set -e
+env
 echo "current working dir: `pwd`"
 if [ -z $SRC ];
 then
