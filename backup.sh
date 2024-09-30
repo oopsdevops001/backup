@@ -28,5 +28,5 @@ zip -r ${zipfilename} $BACKUP_NAME
 else
 zip -P $PASSWORD -r ${zipfilename} $BACKUP_NAME
 fi
-./rclone copy ${zipfilename} $TARGET
+rclone copy ${zipfilename} $TARGET
 rm ${zipfilename}
